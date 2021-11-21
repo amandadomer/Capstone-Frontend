@@ -7,7 +7,7 @@ function SideBar() {
         <div className="sideBar">
             <h1>name of app</h1><br></br>
             Browse All Items<br></br>
-            My Profile<br></br>
+            My Purchases<br></br>
              Shopping Bag <br></br>
             <SearchBar/>
         </div>

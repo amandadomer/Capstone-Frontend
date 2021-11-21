@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import opener from './opener-2.png'
 import './signUp.css';
 import NewAccount from '../NewAccount/newAccount';

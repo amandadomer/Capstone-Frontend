@@ -4,7 +4,7 @@ import photo from './testerphoto.jpeg'
 
 function Feed() {
     return (
-        <div><h1>what's new</h1>
+        <div> <span className="new">here's what's new</span>
             <div class="container">
                 <div class="row align-items-start">
                         <div class="col">

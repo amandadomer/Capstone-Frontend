@@ -1,19 +1,22 @@
-import React from "react";
-import 'bootstrap/dist/css/bootstrap.css';
-import './signUp.css'
+import React from 'react';
+import opener from './opener-2.png'
+import './signUp.css';
+import NewAccount from '../NewAccount/newAccount';
 
-const SignUp = (props) => {
+function SignUp() {
     return (
-        <form>
-            <div class="card">
-                <label for="exampleInputEmail1" class="form-label">Email address:</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                <label for="exampleInputPassword1" class="form-label">Password:</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" />
-            <button type="submit" class="btn btn-dark" className="btn">Sign up</button><br></br>
+        <div>
+            <div class="row">
+                <div class="col-6">
+                    <img className="image" src={opener} />
+                    
+                </div>
+                <div class="col-6 ">
+                    <NewAccount/>
+                </div>
             </div>
-        </form>
+        </div>
     )
-};
+}
 
 export default SignUp;

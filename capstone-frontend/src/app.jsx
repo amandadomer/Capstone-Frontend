@@ -9,6 +9,7 @@ import Bag from './components/ShoppingBag/shoppingBag';
 import Checkout from './components/Checkout/checkout';
 import axios from 'axios';
 import AddProduct from './components/AddProduct/addProduct';
+import Detail from './components/ProductDetail/productDetail';
 import './app.css'
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
                 <SearchResults/>
                 <Bag/>
                 <Checkout/>
+                <Detail/>
                 <AddProduct/>
        </div> 
     )

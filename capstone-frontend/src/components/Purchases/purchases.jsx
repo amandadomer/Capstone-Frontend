@@ -10,7 +10,7 @@ function Purchases() {
                     <SideBar/>
                 </div>
                 <div class="col-9">
-                   <span className="profile">Your Purchase History</span>
+                   <span className="new">Your Purchase History</span>
                         Item purchased<br></br>
                         Write a review:
                     <label for="exampleFormControlTextarea1" class="form-label"></label>

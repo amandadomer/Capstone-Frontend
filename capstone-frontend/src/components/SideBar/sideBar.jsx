@@ -9,7 +9,7 @@ function SideBar() {
             Browse All Items<br></br>
             Post An Item<br></br>
             My Purchases<br></br>
-             Shopping Bag <br></br>
+            Shopping Bag <br></br>
             <SearchBar/>
         </div>
     )

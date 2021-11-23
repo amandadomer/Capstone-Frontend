@@ -1,9 +1,8 @@
 import React from 'react';
 import SideBar from '../SideBar/sideBar';
-import Feed from '../Feed/feed';
-import "./homePage.css";
+import "./shoppingBag.css";
 
-function Home() {
+function Bag() {
     return (
         <div>
             <div class="row">
@@ -11,10 +10,10 @@ function Home() {
                     <SideBar/>
                 </div>
                 <div class="col-9">
-                    <Feed/>
+                    <span className="new">Your Shopping Bag</span>
                 </div>
             </div>
         </div>
 )};
 
-export default Home;
+export default Bag;

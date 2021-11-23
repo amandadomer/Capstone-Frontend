@@ -9,7 +9,6 @@ function SignUp() {
             <div class="row">
                 <div class="col-6">
                     <img className="image" src={opener} />
-                    
                 </div>
                 <div class="col-6 ">
                     <NewAccount/>

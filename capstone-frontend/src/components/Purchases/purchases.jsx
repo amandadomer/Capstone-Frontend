@@ -10,17 +10,15 @@ function Purchases() {
                     <SideBar/>
                 </div>
                 <div class="col-9">
-                   <span className="profile">your purchase history</span>
-                   items purchased<br></br>
-                   <form action="/action_page.php">
-                        <label for="fname">leave a review</label><br></br>
-                        <input className="box" type="text" id="fname" name="fname"></input>
-                        <input type="submit" value="Submit"/>
-                    </form>
+                   <span className="profile">Your Purchase History</span>
+                        Item purchased<br></br>
+                        Write a review:
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
             </div>
         </div>
     )
-}
+};
 
 export default Purchases;

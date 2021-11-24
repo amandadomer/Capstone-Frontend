@@ -2,6 +2,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import './newAccount.css'
 
+
 const NewAccount = (props) => {
     return (
         <form>

@@ -11,6 +11,7 @@ function Bag() {
                 </div>
                 <div class="col-9">
                     <span className="new">Your Shopping Bag</span>
+                    
                 </div>
             </div>
         </div>

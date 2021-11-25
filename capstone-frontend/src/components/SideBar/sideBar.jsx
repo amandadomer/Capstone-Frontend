@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import SearchBar from '../SearchBar/searchBar';
 import './sideBar.css';
 
@@ -6,10 +7,11 @@ function SideBar() {
     return (
         <div className="sideBar">
             <h1>name of app</h1><br></br>
-            Browse All Items<br></br>
-            Post An Item<br></br>
-            My Purchases<br></br>
-            Shopping Bag <br></br>
+
+            <Link className="link" to="/home">Browse All Items</Link><br></br>
+            <Link className="link" to="/purchases">Your Purchases</Link><br></br>
+            <Link className="link" to="/bag">Shopping Bag</Link><br></br>
+            Logout<br></br>
             <SearchBar/>
         </div>
     )

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Routes, Route } from 'react-router-dom';
+import {Routes, Route, Link } from 'react-router-dom';
 import Home from './components/HomePage/homePage';
 import Purchases from './components/Purchases/purchases';
 import Landing from './components/Landing/landing';
@@ -12,6 +12,7 @@ import AddProduct from './components/AddProduct/addProduct';
 import Detail from './components/ProductDetail/productDetail';
 import './app.css'
 import jwtDecode from 'jwt-decode';
+import SignIn from './components/SignIn/signIn';
 
 function App() {
     const [user, setUser] = useState();
@@ -30,15 +31,15 @@ function App() {
       
     return (
        <div>
-                <Landing/>
-                {/* <Home/> */}
-                <Purchases/>
-                <SignUp/>
-                <SearchResults/>
-                <Bag/>
-                <Checkout/>
-                <Detail/>
-                <AddProduct/>
+        <Routes> 
+            <Route path="/" element= {<Landing/>} />
+            <Route path="/signup" element = {<SignUp/>} />
+            <Route path="/home" element = {<Home/>} />
+            <Route path="/bag" element = {<Bag/>} />
+            <Route path="/purchases" element = {<Purchases/>} />
+            
+        </Routes>
+
        </div> 
     )
 };

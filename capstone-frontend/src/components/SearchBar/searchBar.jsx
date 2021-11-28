@@ -2,6 +2,11 @@ import React from 'react';
 import './searchBar.css';
 
 function SearchBar (props) {
+
+    const handleSearch = (event) => {
+        
+    }
+
       return (
             <div className="searchBar">
                 <form className="form-inline">

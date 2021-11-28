@@ -1,30 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SideBar from '../SideBar/sideBar';
 import "./productDetail.css";
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
-function Detail() {
-    return (
-        <div>
-            <div class="row">
-                <div class="col-3">
-                    <SideBar/>
-                </div>
-                <div class="col-9">
-                    <span className="new">Product Detail</span>
-                    <div class="container">
-                        <div class="row align-items-start">
-                                <div class="col-4">
-                                    image                                        
-                                </div>
-                                <div class="col-8">
-                                    Item name<br></br>
-                                    description etc.
-                                </div>                                
-                        </div>
-                    </div>        
+function Detail(props) {
+    const test = useParams();
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        console.log(test)
+        axios.get(`http://localhost:3000/api/products/${products.id}`)
+       .then(response =>{
+           setProducts(response.data);
+           console.log(response.data);
+       })
+        }, [])
+
+        return (
+            <div>
+                <span className="new">Detail</span>
+                <div class="container">
+                    <div class="row align-items-start">
+                    {products && products.filter((product) => {
+                        return(
+                                <ul><li>{product.img}{product.name}</li>
+                                <li>{product.price}</li></ul>
+                            )
+                        })}
+                    </div>  
                 </div>
             </div>
-        </div>
 )};
 
 export default Detail;

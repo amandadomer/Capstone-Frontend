@@ -6,7 +6,7 @@ import './sideBar.css';
 function SideBar() {
     return (
         <div className="sideBar">
-            <h1>name of app</h1><br></br>
+            <h1>Clothes Minded</h1><br></br>
 
             <Link className="link" to="/home">Browse All Items</Link><br></br>
             <Link className="link" to="/purchases">Your Purchases</Link><br></br>

@@ -1,33 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import './feed.css';
+import { Image, Link, useNavigate } from "react-router-dom";
 import photo from './testerphoto.jpeg'
 import axios from 'axios';
 
 function Feed(props) {
     const [products, setProducts] = useState([]);
 
-    useEffect (() => {
-        axios.get("http://localhost:3000/api/products")
-        .then((response) => setProducts(response.data))
-    }, []);
+    useEffect(() => {
+       axios.get("http://localhost:3000/api/products")
+       .then(response =>setProducts(response.data))
+
+        }, [])
 
     return (
-        <div> 
+        <div>
             <span className="new">What's New</span>
-            <div class="container">
-                <div class="row align-items-start">
-                      words
-                        
-                        <div class="col">
-                            <img src={photo} width="300px" height="300px" />
-                        </div>
-                        <div className = "col">
-                            <img src={photo} width="300px" height="300px"/> 
-                    </div>
+            <div className="container">
+                <div className="row">
+                <div className="col">
+                    {products && products.map((product) => {
+                        return(
+                           <> <Link to={`/detail/${product._id}`}><img className="thumbnail" src={product.img}/></Link></>
+                        )
+                    })}
                 </div>
-            </div>        
+                </div>  
+            </div>
         </div>
     )
 }
 
+
 export default Feed;
+
+// {product.name}-${product.price}

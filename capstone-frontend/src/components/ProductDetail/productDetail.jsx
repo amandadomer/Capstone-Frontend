@@ -24,7 +24,8 @@ function Detail(props) {
                     <div class="row align-items-start">
                     {products && products.filter((product) => {
                         return(
-                                <ul><li>{product.img}{product.name}</li>
+                                <ul><li>{product.img}</li>
+                                <li>{product.name}</li>
                                 <li>{product.price}</li></ul>
                             )
                         })}

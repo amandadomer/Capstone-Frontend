@@ -13,6 +13,7 @@ function Feed(props) {
 
         }, [])
 
+
     return (
         <div>
             <span className="new">What's New</span>

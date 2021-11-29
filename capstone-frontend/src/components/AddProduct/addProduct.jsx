@@ -4,13 +4,13 @@ import axios from 'axios';
 import SideBar from '../SideBar/sideBar';
 
 function AddProduct() {
-    
-const navigate = useNavigate();
     const [name, setName] = useState()
     const [description, setDescription] = useState ();
     const [size, setSize] = useState ();
     const [price, setPrice] = useState();
     const [img, setImg] = useState();
+    const navigate = useNavigate();
+
   
     const handleName = (event) => {
         setName(event.target.value);
@@ -43,7 +43,7 @@ const navigate = useNavigate();
         }
             console.log(newPost)
             await axios.post(`http://localhost:3000/api/products/`, newPost)
-            .then(navigate(`/home`))
+            .then(navigate('/home'))
           };  
   
       return (
@@ -56,13 +56,13 @@ const navigate = useNavigate();
                  <form onSubmit ={handleSubmit}>
                             <label for="exampleFormControlInput1" class="form-label">What are you selling?</label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" onChange={handleName}></input>
-                            <label for="exampleFormControlTextarea1" class="form-label" >Describe it!</label>
+                            <label for="exampleFormControlTextarea1" class="form-label">Describe it!</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" onChange={handleDescription}></textarea>
-                            <label for="exampleFormControlInput1" class="form-label" >Size</label>
+                            <label for="exampleFormControlInput1" class="form-label">Size:</label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" onChange={handleSize}></input>
-                            <label for="exampleFormControlInput1" class="form-label">Price</label>
+                            <label for="exampleFormControlInput1" class="form-label">Price:</label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" onChange={handlePrice}></input>
-                            <label for="exampleFormControlInput1" class="form-label">Image Link</label>
+                            <label for="exampleFormControlInput1" class="form-label">Image Link:</label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" onChange={handleImg}></input>
                             <button type="submit" className="button">Post</button><br></br>
                       </form>

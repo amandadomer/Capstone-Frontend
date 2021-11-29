@@ -6,7 +6,6 @@ function SearchBar (props) {
 
     const handleSearch = (event) => {
         
-
     }
 
       return (

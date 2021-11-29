@@ -10,9 +10,7 @@ function SideBar() {
 
             <Link className="link" to="/home">Browse All Items</Link><br></br>
             <Link className="link" to="/sell">Sell An Item</Link><br></br>
-            <Link className="link" to="/purchases">Your Purchases</Link><br></br>
             <Link className="link" to="/bag">Shopping Bag</Link><br></br>
-            Logout<br></br>
             <SearchBar/>
         </div>
     )

@@ -1,7 +1,6 @@
 import React from 'react';
 import SideBar from '../SideBar/sideBar';
 import './searchResults.css';
-import photo from './testerphoto.jpeg';
 
 function SearchResults() {
     return (
@@ -14,15 +13,7 @@ function SearchResults() {
                         <div> <span className="new">Search Results</span>
                             <div class="container">
                                 <div class="row align-items-start">
-                                        <div class="col">
-                                            <img src={photo} width="300px" height="300px" />
-                                        </div>
-                                        <div class="col">
-                                            <img src={photo} width="300px" height="300px" />
-                                        </div>
-                                        <div class="col">
-                                            <img src={photo} width="300px" height="300px" />
-                                    </div>
+                                        words
                                 
                                 </div>
                             </div>        

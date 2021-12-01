@@ -21,8 +21,7 @@ function Feed(props) {
                 <div className="col">
                     {products && products.map((product) => {
                         return(
-                           <> <Link to={`/detail/${product._id}`}><img className="thumbnail" src={product.img}/>
-</Link></>
+                           <> <Link to={`/detail/${product._id}`}><img className="thumbnail" src={product.img}/></Link></>
                         )
                     })}
                 </div>

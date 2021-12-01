@@ -5,7 +5,7 @@ import Purchases from './components/Purchases/purchases';
 import Landing from './components/Landing/landing';
 import SignUp from './components/SignUp/signUp';
 import SearchResults from './components/SearchResults/searchResults';
-import Bag from './components/ShoppingBag/shoppingBag';
+import Cart from './components/ShoppingCart/shoppingCart';
 import Checkout from './components/Checkout/checkout';
 import axios from 'axios';
 import AddProduct from './components/AddProduct/addProduct';
@@ -23,7 +23,7 @@ function App() {
         try {
             const user = jwtDecode(jwt);
             setUser({user});
-      
+            console.log(user)
         } catch {
       
         }
@@ -36,8 +36,8 @@ function App() {
             <Route path="/signup" element = {<SignUp/>} />
             <Route path="/home" element = {<Home/>} />
             <Route path="/sell" element = {<AddProduct/>} />
-            <Route path="/detail/:id"  element = {<Detail/> } />
-            <Route path="/bag" element = {<Bag/>} />
+            <Route path="/detail/:id"  element = {<Detail user={user}/> } />
+            <Route path="/cart" element = {<Cart user={user}/>} />
             <Route path="/purchases" element = {<Purchases/>} />
             
         </Routes>

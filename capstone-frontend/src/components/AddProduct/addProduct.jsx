@@ -10,7 +10,6 @@ function AddProduct() {
     const [price, setPrice] = useState();
     const [img, setImg] = useState();
     const navigate = useNavigate();
-
   
     const handleName = (event) => {
         setName(event.target.value);

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import opener from './opener.png'
-import './signUp.css';
 import NewAccount from '../NewAccount/newAccount';
 
 function SignUp() {

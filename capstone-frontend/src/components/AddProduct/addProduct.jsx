@@ -52,6 +52,7 @@ function AddProduct() {
                      <SideBar/>
                  </div>
                  <div class="col-7">
+                 <span className="new">Sell Something!</span>
                  <form onSubmit ={handleSubmit}>
                             <label for="exampleFormControlInput1" class="form-label">What are you selling?</label>
                             <input type="text" class="form-control" id="exampleFormControlInput1" onChange={handleName}></input>

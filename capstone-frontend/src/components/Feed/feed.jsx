@@ -23,8 +23,10 @@ function Feed({products, setProducts, searchInput, setSearchInput}) {
                 <div className="row">
                 <div className="col-6">
                     {products && products.map((product) => (product.name.toLowerCase().includes(searchInput) || 
+                    product.size.toLowerCase().includes(searchInput) || 
+                    product.description.toLowerCase().includes(searchInput) ||
                     product.name.toUpperCase().includes(searchInput)) ?
-                        <> <Link to={`/detail/${product._id}`}><img className="thumbnail" src={product.img}/></Link><br></br><div className="descrip">{product.name} ${product.price}</div></> :null
+                        <><Link to={`/detail/${product._id}`}><img className="thumbnail" src={product.img}/></Link><br></br><div className="descrip">{product.name} ${product.price}</div></> :null
                     )}
                 </div>
                 </div>

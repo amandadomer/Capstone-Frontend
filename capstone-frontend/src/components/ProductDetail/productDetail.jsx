@@ -49,7 +49,8 @@ function Detail(props) {
                                 Price: ${product.price}<br></br>
                                 <button type="submit" className="add" onClick={handleSubmit}>Add to Cart</button><br></br><br></br>
                                 Add Comment: <br></br>
-                                <Comment id={product._id}/>
+                                <Comment id={product._id}/><br></br>
+                                Comments:<br></br>
                                 {product.reviews}
                             </div>
                     }

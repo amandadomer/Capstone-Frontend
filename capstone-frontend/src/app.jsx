@@ -3,7 +3,6 @@ import {Routes, Route, Link } from 'react-router-dom';
 import Home from './components/HomePage/homePage';
 import Landing from './components/Landing/landing';
 import SignUp from './components/SignUp/signUp';
-import SearchResults from './components/SearchResults/searchResults';
 import Cart from './components/ShoppingCart/shoppingCart';
 import Checkout from './components/Checkout/checkout';
 import axios from 'axios';

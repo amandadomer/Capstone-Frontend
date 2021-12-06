@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams  } from "react-router-dom"
 import SideBar from '../SideBar/sideBar';
 import "./productDetail.css";
+import Comment from '../Comments/comments';
 import axios from 'axios';
 
 function Detail(props) {
@@ -12,9 +13,9 @@ function Detail(props) {
     const navigate = useNavigate();
     const jwt = localStorage.getItem('token');
 
-    const getProduct = async () => {
+    const getProduct  = () => {
         try {
-            await axios.get(`http://localhost:3000/api/products/${test.id}`)
+            axios.get(`http://localhost:3000/api/products/${test.id}`)
             .then(response => setProduct(response.data))
         }   catch(err) {}
     };
@@ -28,12 +29,12 @@ function Detail(props) {
         console.log(jwt)
         const id = props.user.user._id;
             await axios.post(`http://localhost:3000/api/users/${id}/shoppingcart/${product._id}/`, { headers: { 'x-auth-token': jwt }})
-            .then(navigate('/cart'))
+            .then (response => console.log(response))
+            .then(navigate('/home'))
           };  
   
-
         return (
-            <div className="container">
+            <div>
                 <div className="row">
                     <div className="col-4">
                         <SideBar/>
@@ -42,17 +43,19 @@ function Detail(props) {
                     {product &&
                             <div>
                                 <span className="new">{product.name}</span>
-                                <img className="photo" src={product.img}/><br></br>                  
+                                <img className="thumbnail" src={product.img}/><br></br>                  
                                 Size: {product.size}<br></br>
                                 Description: {product.description}<br></br>
                                 Price: ${product.price}<br></br>
-                                <button type="submit" className="add" onClick={handleSubmit}>Add to Cart</button><br></br>
+                                <button type="submit" className="add" onClick={handleSubmit}>Add to Cart</button><br></br><br></br>
+                                Add Comment: <br></br>
+                                <Comment id={product._id}/>
+                                {product.reviews}
                             </div>
                     }
                     </div>
                 </div>
             </div>
-
 )};
 
 export default Detail;

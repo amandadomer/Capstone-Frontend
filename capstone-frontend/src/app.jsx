@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Routes, Route, Link } from 'react-router-dom';
 import Home from './components/HomePage/homePage';
-import Purchases from './components/Purchases/purchases';
 import Landing from './components/Landing/landing';
 import SignUp from './components/SignUp/signUp';
 import SearchResults from './components/SearchResults/searchResults';
@@ -13,6 +12,7 @@ import Detail from './components/ProductDetail/productDetail';
 import './app.css'
 import jwtDecode from 'jwt-decode';
 import SignIn from './components/SignIn/signIn';
+import Pay from './components/Checkout/checkout';
 
 function App() {
     const [user, setUser] = useState();
@@ -38,7 +38,7 @@ function App() {
             <Route path="/sell" element = {<AddProduct/>} />
             <Route path="/detail/:id"  element = {<Detail user={user}/> } />
             <Route path="/cart" element = {<Cart user={user}/>} />
-            <Route path="/purchases" element = {<Purchases/>} />
+            <Route path="/checkout" element = {<Checkout/>} />
             
         </Routes>
 

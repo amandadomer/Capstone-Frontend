@@ -30,7 +30,7 @@ const SignIn = () => {
                 Password:
                 <input type="password" class="form-control" id="exampleInputPassword1" onChange={(event) => setPassword(event.target.value)} />
                 <button type="submit" class="btn btn-dark" className="btn" onClick={handleSubmit}>Log in</button><br></br>
-                Don't have an account? <Link to="/signup">Sign up here.</Link>
+                Don't have an account? <Link to="/signup" className="blk">Sign up here.</Link>
             </div>
         </form>
   )};

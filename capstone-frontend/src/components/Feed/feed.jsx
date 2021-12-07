@@ -16,9 +16,8 @@ function Feed({products, setProducts, searchInput, setSearchInput}) {
 
     return (
         
-
         <div>
-                    <span className="new">What's New</span>
+            <span className="new">What's New</span>
             <div className="container">
                 <div className="row">
                 <div className="col-6">

@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import './newAccount.css';
 import axios from "axios";
@@ -30,6 +30,7 @@ const NewAccount = () => {
                 Password:
                 <input type="password" class="form-control" id="exampleInputPassword1" onChange={(event) => setPassword(event.target.value)} />
                 <button type="submit" class="btn btn-dark" className="btn" onClick={handleSubmit}>Sign Up</button><br></br>
+                <Link to="/" className="blk">Already have an account? Sign in here.</Link>
             </div>
         </form>
     );
